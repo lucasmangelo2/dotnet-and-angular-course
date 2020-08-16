@@ -1,0 +1,28 @@
+<div>
+    <input type="number" [(ngModel)]="product.Id" disabled placeholder="Identificador do Produto">
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="product.Name" placeholder="Nome do Produto">
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="product.Description" placeholder="Descrição do Produto">
+</div>
+
+<div class="actions">
+    <button (click)="onInsertClick()" *ngIf="!product.Id">Inserir</button>
+    <button (click)="onUpdateClick()" *ngIf="product.Id > 0">Atualizar</button>
+    <button (click)="onDeleteClick()" *ngIf="product.Id > 0">Deletar</button>
+    <button (click)="clear()">Limpar</button>
+</div>
+
+<div class="list">
+    <ul>
+        <li *ngFor="let item of list">
+            {{item.Name}} - {{item.Description}}
+            
+            <button (click)="onSelectProductClick(item)">Selecionar</button>
+        </li>
+    </ul>
+</div>
