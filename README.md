@@ -1,2 +1,2 @@
-#Curso de .Net Core e angular 10
+# Curso de .Net Core e angular 10
 
